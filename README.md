@@ -31,13 +31,19 @@ To learn more about the different types of associations and how they work in Rai
 # Installation
 To install and run this application locally, you need to have Ruby and Rails installed on your machine. You can follow these steps:
 
-Clone this repository to your local machine.
-Navigate to the project directory and run bundle install to install all the dependencies.
-Run rails db:migrate to create and set up the database tables.
-Run rails db:seed to populate some sample data (optional).
-Run rails server to start the local server.
+ . Clone this repository to your local machine.
+
+ . Navigate to the project directory and run bundle install to install all the dependencies.
+
+ . Run rails db:migrate to create and set up the database tables.
+
+ . Run rails db:seed to populate some sample data (optional).
+
+ . Run rails server to start the local server.
+
 Visit http://localhost:3000/ in your browser to see the application.
-Usage
+
+# Usage
 The application has a simple user interface that allows you to perform basic CRUD (create, read, update, delete) operations on pizzas and restaurants.
 
 # You can access the following pages:
