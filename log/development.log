@@ -197,3 +197,23 @@ Processing by PizzasController#index as HTML
 Completed 200 OK in 25ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 17033)
 
 
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/restaurants" for 127.0.0.1 at 2023-03-20 19:53:45 +0300
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+Completed 200 OK in 18ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 4673)
+
+
+Started GET "/restaurants/1" for 127.0.0.1 at 2023-03-20 19:53:53 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:14:in `show'
+  [1m[36mPizza Load (0.2ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" INNER JOIN "restaurant_pizzas" ON "pizzas"."id" = "restaurant_pizzas"."pizza_id" WHERE "restaurant_pizzas"."restaurant_id" = ?[0m  [["restaurant_id", 1]]
+  ↳ app/controllers/restaurants_controller.rb:19:in `show'
+Completed 200 OK in 178ms (Views: 0.3ms | ActiveRecord: 2.3ms | Allocations: 21081)
+
+
