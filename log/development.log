@@ -181,3 +181,19 @@ Processing by RestaurantsController#index as HTML
 Completed 200 OK in 65ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 19459)
 
 
+Started GET "/restaurant_pizzas" for 127.0.0.1 at 2023-03-20 19:10:47 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant_pizzas"):
+  
+Started GET "/pizzas" for 127.0.0.1 at 2023-03-20 19:11:12 +0300
+  
+ActionController::RoutingError (uninitialized constant PizzasController
+Did you mean?  PizzaTrackerApi):
+  
+Started GET "/pizzas" for 127.0.0.1 at 2023-03-20 19:19:44 +0300
+Processing by PizzasController#index as HTML
+  [1m[36mPizza Load (0.1ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas"[0m
+  ↳ app/controllers/pizzas_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 17033)
+
+
