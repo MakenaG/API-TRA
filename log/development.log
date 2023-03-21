@@ -217,3 +217,47 @@ Processing by RestaurantsController#show as HTML
 Completed 200 OK in 178ms (Views: 0.3ms | ActiveRecord: 2.3ms | Allocations: 21081)
 
 
+Started GET "/" for 127.0.0.1 at 2023-03-21 09:32:00 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 73.5ms | Allocations: 767)
+Completed 200 OK in 507ms (Views: 193.4ms | ActiveRecord: 0.0ms | Allocations: 6688)
+
+
+Started GET "/pizzas" for 127.0.0.1 at 2023-03-21 09:42:16 +0300
+Processing by PizzasController#index as HTML
+  [1m[36mPizza Load (0.1ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas"[0m
+  ↳ app/controllers/pizzas_controller.rb:8:in `index'
+Completed 200 OK in 393ms (Views: 21.1ms | ActiveRecord: 10.6ms | Allocations: 20176)
+
+
+Started GET "/pizzas/1" for 127.0.0.1 at 2023-03-21 09:42:34 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/pizzas/1"):
+  
+Started GET "/pizzas" for 127.0.0.1 at 2023-03-21 09:42:43 +0300
+Processing by PizzasController#index as HTML
+  [1m[36mPizza Load (0.2ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas"[0m
+  ↳ app/controllers/pizzas_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 724)
+
+
+Started GET "/restraunts" for 127.0.0.1 at 2023-03-21 09:45:15 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/restraunts"):
+  
+Started GET "/restaurants" for 127.0.0.1 at 2023-03-21 09:45:52 +0300
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+Completed 200 OK in 38ms (Views: 0.5ms | ActiveRecord: 0.9ms | Allocations: 16866)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2023-03-21 10:09:44 +0300
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 878)
+
+
