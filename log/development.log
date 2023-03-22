@@ -261,3 +261,62 @@ Processing by RestaurantsController#index as HTML
 Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 878)
 
 
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRestaurant Destroy (0.7ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRestaurant Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "restaurants" WHERE "restaurants"."name" = ? LIMIT ?[0m  [["name", "Pizza Hut"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRestaurant Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "restaurants" WHERE "restaurants"."name" = ? LIMIT ?[0m  [["name", "Pizza Hut"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRestaurant Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "restaurants" WHERE "restaurants"."name" = ? LIMIT ?[0m  [["name", "Sottocasa NYC"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/" for 127.0.0.1 at 2023-03-22 15:36:39 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 15.6ms | Allocations: 660)
+Completed 200 OK in 119ms (Views: 21.7ms | ActiveRecord: 0.0ms | Allocations: 5396)
+
+
+Started GET "/pizzas" for 127.0.0.1 at 2023-03-22 15:36:50 +0300
+Processing by PizzasController#index as HTML
+  [1m[36mPizza Load (0.2ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas"[0m
+  ↳ app/controllers/pizzas_controller.rb:8:in `index'
+No serializer found for resource: {"id"=>1, "name"=>"Pepperoni", "ingredients"=>nil}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.25ms)
+Completed 200 OK in 37ms (Views: 8.7ms | ActiveRecord: 1.0ms | Allocations: 22713)
+
+
+Started GET "/pizzas/1" for 127.0.0.1 at 2023-03-22 15:37:20 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/pizzas/1"):
+  
+Started GET "/pizzas" for 127.0.0.1 at 2023-03-22 15:38:09 +0300
+Processing by PizzasController#index as HTML
+  [1m[36mPizza Load (4.0ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas"[0m
+  ↳ app/controllers/pizzas_controller.rb:8:in `index'
+No serializer found for resource: {"id"=>1, "name"=>"Pepperoni", "ingredients"=>nil}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.18ms)
+Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 4.0ms | Allocations: 818)
+
+
+Started GET "/restaurants_pizzas" for 127.0.0.1 at 2023-03-22 15:38:27 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/restaurants_pizzas"):
+  
+Started GET "/restaurant_pizzas" for 127.0.0.1 at 2023-03-22 15:38:40 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant_pizzas"):
+  
+Started GET "/restaurant_pizzas" for 127.0.0.1 at 2023-03-22 15:39:58 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant_pizzas"):
+  
